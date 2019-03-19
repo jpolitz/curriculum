@@ -1,0 +1,66 @@
+= Flags of the World (Capstone Project)
+
+*Students demonstrate what they’ve learned about image composition, coordinates, and proportions to recreate a nation’s flag with code.*
+
+
+[.left-header,cols="20a,80a", stripes=none]
+|===
+|Lesson Goals
+|Students will be able to:
+
+* Decompose a composite image into its component parts
+* Accurately recreate an image using coordinates and proportions
+
+
+|Student-Facing Lesson Goals
+|
+* I can break down a complex image into smaller images.
+* I can describe a position in the first quadrant using coordinates.
+* I can describe the dimensions of a shape using proportions (ex: a flag that is 200x300 has a height:width ratio of 2:3)
+
+
+|Key Points for the Facilitator
+|
+* Encourage students to choose a flag that represents an appropriate challenge to them.  
+  
+* Students may not realize right away that they don’t need to define repeated elements as individual values, such as defining 7 separate, identical stripes for the https://en.wikipedia.org/wiki/Flag_of_Liberia[flag of Liberia].  Ask students to figure out the fewest number of elements they need to define in order to create their flag.
+
+* Students might choose a flag that contains an emblem that can't be recreated using geometric shapes, such as the https://en.wikipedia.org/wiki/Flag_of_Mexico[flag of Mexico].  These emblems can be found through an online image search and brought in using bitmap/url and scaled to the appropriate size as they did in the Dilations lesson. @worksheet-link{intro-to-dilations/plan.adoc}
+
+* Students shouldn't recreate a flag they've created before or do a "color swap" (ex: creating the flag of Ireland and changing the colors to make the flag of Italy).  Encourage students to challenge themselves and each other to create something they'll be proud of!
+
+|Prerequisites
+|
+* Students should be familiar with Circles of Evaluation.
+* Students should be familiar with image manipulation functions.
+
+|Materials
+|
+* Links to printables, activities, etc., go here
+|===
+
+[.left-header,cols="20a,80a", stripes=none]
+|===
+|Math Standards (CCSS)
+|
+* http://www.corestandards.org/Math/Practice/MP1[CCSS.MATH.PRACTICE.MP1], 
+Make sense of problems and persevere in solving them
+
+* http://www.corestandards.org/Math/Practice/MP6[CCSS.MATH.PRACTICE.MP6],
+Attend to precision
+
+|CS Standards (CSTA)
+|
+* CS Standards here.
+|===
+
+
+== Get Ready:
+
+Students should have their computer, workbook, contracts page, and pencil.
+
+== Project (45 min)
+
+Students use what they've learned through previous lessons to create a flag or flags of their choosing.  
+
+Students should use the "Flag Planning" sheet to plan out their code before moving to the computer.  The facilitator may choose to have students get approval on their design and Circles of Evaluation before moving to the computer.
