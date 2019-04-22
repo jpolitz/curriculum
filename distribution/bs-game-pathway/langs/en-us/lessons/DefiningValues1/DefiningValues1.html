@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.8">
+<meta name="author" content="*Students learn how to define lines of code as a set value that can be used repeatedly in different situations, similar to a variable in math.*">
+<title>Defining Values</title>
+<link rel="stylesheet" href="./curriculum.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Defining Values</h1>
+<div class="details">
+<span id="author" class="author">*Students learn how to define lines of code as a set value that can be used repeatedly in different situations, similar to a variable in math.*</span><br>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Lesson Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Students will be able to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Demonstrate understanding of variables and why they are useful in math and programming</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Student-facing Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>I can define a line of code as a value, such as <code>myStar</code> or <code>eyeColor</code>.</p>
+</li>
+<li>
+<p>I can use my defined value in different situations.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Key Points For The Facilitator</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Check frequently for understanding of datatypes and contracts during this lesson and throughout subsequent lessons.</p>
+</li>
+<li>
+<p>Students will use their Contracts page frequently, so it should be kept in an accessible, convenient location.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prerequisites</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Students should be familiar with Circles of Evaluation.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Materials</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Workbook, writing utensil, computer</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Math Standards(CCSS)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.corestandards.org/Math/Practice/MP1/">CCSS.MATH.PRACTICE.MP1</a>,  Make sense of problems and persevere in solving them.</p>
+</li>
+<li>
+<p><a href="http://www.corestandards.org/Math/Practice/MP2/">CCSS.MATH.PRACTICE.MP2</a>, Reason abstractly and quantitatively.</p>
+</li>
+<li>
+<p>Other math standards</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CS Standards(CSTA)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>CS Standards here</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<div class="title">Glossary</div>
+<ul>
+<li>
+<p><strong>contract</strong>: a statement of the name, domain, and range of a function</p>
+</li>
+<li>
+<p><strong>variable</strong>: something that changes</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_ready">Get Ready:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students should be logged into WeScheme.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_launch_5_mins">Launch: (5 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Display sample code from the "Prize Star" exercise (Lesson 2c) visible to students.</p>
+</div>
+<div class="paragraph">
+<p>What common element was repeated throughout all the lines of code? <code><em>(star 50 "solid" "green")</em></code></p>
+</div>
+<div class="paragraph">
+<p>What happened when you were asked to change the color of the star to gold? <em>Had to change it everywhere it appeared</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explore_10_mins">Explore: (10 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students open the “Exploring Define” file and use the commented directions there to explore the new ‘define’ keyword.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discuss_10_mins">Discuss: (10 mins)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>How is ‘define’ similar to a function?  How is it different?
+<em>It’s written inside parentheses like a function, ‘define’ must be given a value name and a function call (a circle of eval), but ‘define’ doesn’t have an output</em></p>
+</li>
+<li>
+<p>What is the usefulness of defining values?
+<em>Lets the programmer reuse code, saves time, lets the programmer make changes easily, allows us to more easily use elements inside other functions</em></p>
+</li>
+<li>
+<p>What datatypes can we define values for?
+<em>All of them - Number, String, Image</em></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock strategy-box">
+<div class="content">
+<div class="title">Support for English Language Learners</div>
+<div class="paragraph">
+<p>MLR 8 - Discussion Supports: As students discuss, rephrase responses as questions and encourage precision in the words being used to reinforce the meanings behind some of the programming-specific language, such as "define" and "value".</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_practice_10_mins">Practice: (10 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students complete the workbook page with their partner.</p>
+</div>
+<div class="paragraph">
+<p>Student-facing task:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Write the code for a solid, green <code>star</code> of size 50 and define it as <code>PRIZE_STAR</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Use PRIZE_STAR to complete the following exercises:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a solid, green <code>star</code> that’s 3 times as large as the original (using the <code>scale</code> function)</p>
+</li>
+<li>
+<p>a solid, green <code>star</code> that’s ½ the size of the original( using the <code>scale</code> function)</p>
+</li>
+<li>
+<p>a solid, green <code>star</code> of size 50 that’s rotated 45 degrees (using the <code>rotate</code> function)</p>
+</li>
+<li>
+<p>a solid, green <code>star</code> that’s 3 times as large as the original and rotated 45 degrees</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_createapply_15_mins">Create/Apply: (15 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Option 1</strong>:
+Define a least 3 values that uses the text function and at least 3 of following functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>rotate</code></p>
+</li>
+<li>
+<p><code>scale</code></p>
+</li>
+<li>
+<p><code>overlay</code></p>
+</li>
+<li>
+<p><code>flip-horizontal</code></p>
+</li>
+<li>
+<p><code>flip-vertical</code></p>
+</li>
+<li>
+<p>any other image producing function(<code>triangle</code>, <code>star</code>, <code>circle</code>, <code>rectangle</code>, etc..)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Write comments to describe what is being produced.</p>
+</div>
+<div class="paragraph">
+<p><strong>Option 2</strong>:
+Have students choose a flag from this list <em>link</em> and recreate the flag using define and any of the functions they&#8217;ve learned so far.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-04-22 20:21:52 UTC
+</div>
+</div>
+</body>
+</html>

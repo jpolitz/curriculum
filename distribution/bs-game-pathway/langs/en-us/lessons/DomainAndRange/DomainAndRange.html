@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.8">
+<title>Domain and Range (Contracts)</title>
+<link rel="stylesheet" href="./curriculum.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Domain and Range (Contracts)</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Students encounter String and Image datatypes and use 'contracts' to make sense of the domain and range of functions</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Lesson Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Students will be able to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Demonstrate understanding of domain and range and how they relate to functions</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Student-facing Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>I can identify the domain and range of a function.</p>
+</li>
+<li>
+<p>I can identify the datatypes Number, String, and Image</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Key Points For The Facilitator</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Check frequently for understanding of datatypes and contracts during this lesson and throughout subsequent lessons.</p>
+</li>
+<li>
+<p>Students will use their Contracts page frequently, so it should be kept in an accessible, convenient location.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prerequisites</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Students should be familiar with Circles of Evaluation.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Materials</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><em>Materials</em></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Math Standards(CCSS)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>8.NS.A.2</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CS Standards(CSTA)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>CS Standards here</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<div class="title">Glossary</div>
+<ul>
+<li>
+<p><strong>contract</strong>: a statement of the name, domain, and range of a function</p>
+</li>
+<li>
+<p><strong>domain</strong>: the type of data that a function expects</p>
+</li>
+<li>
+<p><strong>function</strong>: a mathematical object that consumes inputs and produces an output</p>
+</li>
+<li>
+<p><strong>range</strong>: the type of data that a function produces</p>
+</li>
+</ul>
+</div>
+<div class="ulist standards-hierarchical-table">
+<div class="title">Standards Statements</div>
+<ul>
+<li>
+<p><strong>8.NS.A.2</strong>: Use rational approximations of irrational numbers to compare the size of irrational numbers, locate them approximately on a number line diagram, and estimate the value of expressions (e.g., π²).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_ready">Get Ready:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students should be logged into WeScheme and have their Contracts page ready.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_launch_5_mins">Launch: (5 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Have a Circle of Evaluation up in front of students.  What will this evaluate to?</p>
+</div>
+<div class="paragraph">
+<p>Show a line of code: (* 10 -4).  What will this evaluate to?</p>
+</div>
+<div class="paragraph">
+<p>Show another line of code: (star 50 “solid” “blue”).  What will this evaluate to?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explore_10_mins">Explore: (10 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Give students time to investigate image functions and see how many they can discover.  Students should fill out the contract for any new functions they discover.</p>
+</div>
+<div class="sidebarblock strategy-box">
+<div class="content">
+<div class="title">Strategies for English Language Learners</div>
+<div class="paragraph">
+<p>MLR 2 - Collect and Display: As students explore, walk the room and record student language relating to functions,
+domain, range, contracts, or what they perceive from error messages.  This output can be used for a concept map, which
+can be updated and built upon, bridging student language with disciplinary language while increasing sense-making.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discuss_10_mins">Discuss: (10 mins)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>What image functions did you and your partner discover? _Answers will vary: <code>rectangle</code>, <code>triangle</code>, <code>ellipse</code>, <code>circle</code>, etc.</p>
+</li>
+<li>
+<p>How did you decide what to try? <em>Answers will vary</em></p>
+</li>
+<li>
+<p>What error messages did you see? <em>Answers will vary: Input mismatches, missing parentheses, etc.</em></p>
+</li>
+<li>
+<p>How did you figure out what to do after seeing an error? <em>Answers will vary: Read the error message, think about what the computer is trying to tell us, etc.</em></p>
+</li>
+<li>
+<p>Group together the image functions you discovered by elements in their domain. <em>`star`, <code>circle</code>, and <code>triangle</code> have the same domain, <code>rectangle</code> and <code>ellipse</code> have the same domain, etc.</em></p>
+</li>
+<li>
+<p>Star has three elements in its domain: A Number, a String, and another String.  What do these elements represent?</p>
+</li>
+<li>
+<p>What does star need in order to work?  What happens if I don&#8217;t give it those things?</p>
+</li>
+<li>
+<p>If I give star what it needs, what do I get in return?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_practice_10_mins">Practice: (10 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students complete <em>workbook page</em> with their partner.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_10_mins">Create: (10 mins)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students create a visual "Contracts page" either digitally or physically.  Ask students to think about how they visualize contracts in their own minds and how they could use that imagery to explain functions and their contracts to others.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-04-22 20:21:56 UTC
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.8">
+<title>Introduction to Dilations</title>
+<link rel="stylesheet" href="./curriculum.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Introduction to Dilations</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Students explore dilations and learn a new function that enables them to create enlargements and reductions of images.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Lesson Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Students will be able to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Explain 'center' and 'scale factor' as related to dilations</p>
+</li>
+<li>
+<p>Demonstrate understanding that dilations change measurements of a figure proportionally</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Student-Facing Lesson Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>I can describe what a dilation is using words or actions.</p>
+</li>
+<li>
+<p>I can determine, given the scale factor, if the dilation will be larger or smaller than the original image.</p>
+</li>
+<li>
+<p>I can figure out the dimensions of a shape after a dilation.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Key Points for the Facilitator</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Students should discover independently that a scale factor of &lt;1 creates a smaller image (reduction) and a scale factor of &gt;1 creates a larger image (enlargement).</p>
+</li>
+<li>
+<p>Students should connect the scale factor to previous knowledge of percentages.</p>
+</li>
+<li>
+<p>The scale function in WeScheme will not allow for negative scale factors.  Negative scale factors are covered in Dilations on the Coordinate Plane.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prerequisites</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Students should be familiar with Circles of Evaluation.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Materials</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Links to printables, activities, etc., go here</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Math Standards (CCSS)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.corestandards.org/Math/Content/8/G/A/">CCSS.8.G.A</a>, Understand congruence and similarity using physical models, transparencies, or geometry software.</p>
+</li>
+<li>
+<p><a href="http://www.corestandards.org/Math/Practice/MP2">CCSS.MATH.PRACTICE.MP2</a>,
+Reason abstractly and quantitatively.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CS Standards (CSTA)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>CS Standards here.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<div class="title">Glossary</div>
+<ul>
+<li>
+<p><strong>accessor functions</strong>: functions to extract values from a data structure</p>
+</li>
+<li>
+<p><strong>axis</strong>: A number line on a scatter plot, used to place points that represent pairs of values in data sets</p>
+</li>
+<li>
+<p><strong>contract</strong>: a statement of the name, domain, and range of a function</p>
+</li>
+<li>
+<p><strong>domain</strong>: the type of data that a function expects</p>
+</li>
+<li>
+<p><strong>function</strong>: a mathematical object that consumes inputs and produces an output</p>
+</li>
+<li>
+<p><strong>range</strong>: the type of data that a function produces</p>
+</li>
+</ul>
+</div>
+<div class="ulist standards-hierarchical-table">
+<div class="title">Standards Statements</div>
+<ul>
+<li>
+<p><strong>6.NS.5-8</strong>: The student performs operations with negative numbers, works with the number line and coordinate plane, order and absolute value of numbers, and solves real-world problems with rational numbers.</p>
+</li>
+<li>
+<p><strong>BS-PL.2</strong>: The student is comfortable using and writing Contracts for built-in functions</p>
+</li>
+<li>
+<p><strong>F-IF.1-3</strong>: The student uses function notation to describe, evaluate, and interpret functions in terms of domain and range</p>
+</li>
+<li>
+<p><strong>N-Q</strong>: The student reasons quantitatively in using units to solve problems</p>
+<div class="ulist">
+<ul>
+<li>
+<p>selection of appropriate scale and origin in graphs and data displays</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_ready">Get Ready:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students should have their computer, contracts page, and pencil.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_launch_10_min">Launch: (10 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Which One Doesn&#8217;t Belong?</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/WODB-cubes.jpg" alt="Which One Doesn&#8217;t Belong?" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Give students 20-30 seconds to look at the image and decide which one they think does not belong, then move into groups according to the item they chose.</p>
+</div>
+<div class="paragraph">
+<p>Give students 1-2 minutes to discuss their choice as a group before moving into group discussion and debate.</p>
+</div>
+<div class="paragraph">
+<p>All the figures are cubes that have had some element of their appearance altered, whether it&#8217;s the position on the table, the angle it&#8217;s sitting at, its color, or its size.  However, they&#8217;re all still cubes.</p>
+</div>
+<div class="sidebarblock strategy-box">
+<div class="content">
+<div class="title">Strategies for English Language Learners</div>
+<div class="paragraph">
+<p>MLR 5&#8201;&#8212;&#8201;Co-Craft Questions and Problems: Give students time to think and discuss with a partner or a small group before large group discussion.  Encourage students to build off each other&#8217;s responses and move towards mathematical language.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explore_10_min">Explore: (10 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Have students open the Scaling Exploration teachpack and investigate with their partner, using the workbook as a guide. <a href="../../lessons/intro-to-dilations/workbook-pages/intro-to-dilations-wb1.pdf">Link to Workbook Page, Page 1</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discuss_10_min">Discuss: (10 min)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>What new tools did you discover in this activity? <em>(bitmap/url, scale, image-width)</em></p>
+</li>
+<li>
+<p>What do you think the contract for bitmap/url is? <em>(bitmap/url: String &#8594; Image)</em></p>
+</li>
+<li>
+<p>What do the different parts represent? <em>(The String is a URL (an address on the Internet), and the Image is the picture found at that URL, or address)</em></p>
+</li>
+<li>
+<p>What is the domain for scale? The range? <em>(Domain is Number Image, Range is Image)</em></p>
+</li>
+<li>
+<p>What does the Number appear to mean? <em>(The scale factor, how much bigger or smaller the new image will be)</em></p>
+</li>
+<li>
+<p>What do you notice about the scale factor when using the scale function?  <em>(We can use either decimals or fractions, a scale factor of less than one makes the image smaller and greater than one makes the image larger, negative numbers don&#8217;t work, etc)</em></p>
+</li>
+<li>
+<p>Why is being able to change the size of an object useful?  What are some situations where you&#8217;ve needed to use this skill?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_practice_10_min">Practice: (10 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students practice identifying scale factors and missing lengths.  The facilitator may choose to have students work together as a class, in partners, or individually.  Some sample problems are included on <a href="../../lessons/intro-to-dilations/exercises/intro-to-dilations-ex1.adoc" class="bare">../../lessons/intro-to-dilations/exercises/intro-to-dilations-ex1.adoc</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_createapply_5_min">Create/Apply: (5 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students open the "Define Values" teachpack and search for images on the Internet and bring them into WeScheme using bitmap/url, then scale them to create a scene of their choosing.</p>
+</div>
+<div class="paragraph">
+<p><em>If students will be completing the Game Project, this is a good time for students to find player, target, danger, and background images for their game.</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_some_demo_text_only">Some demo text only</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Test of vocab items:</p>
+</div>
+<div class="paragraph">
+<p>accessor functions</p>
+</div>
+<div class="paragraph">
+<p>axis</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-04-22 20:21:45 UTC
+</div>
+</div>
+</body>
+</html>

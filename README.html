@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.8">
+<title>Read me</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Read me</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_building">Building</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The top directory contains the subdirectories <code>lessons</code>,
+<code>pathways</code>, which between them contain the curriculum content.
+Explore them to see where things are.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>build-pathway
+/lib/*.css
+/shared
+  /langs/en-us/glossary-terms.rkt
+               standards-dictionary.rkt
+               adoc-preproc.rkt
+               form-elements.rkt
+               function-directives.rkt
+               make-workbook.rkt
+/lessons
+  /lessonX/langs/en-us/jened.adoc
+                       exercises/&lt;recipe&gt;.adoc
+                       images/&lt;picture&gt;.jpg
+                       workbook-pages/lesson-index.rkt
+                       workbook-pages/lesson-sols-index.rkt
+                       workbook-pages/&lt;page&gt;.pdf
+                       workbook-sols-pages/&lt;page&gt;.pdf
+/pathways
+  /pathwayX/langs/en-us/narrative.adoc
+                        workbook-index.rkt
+                        external-index.rkt
+                        resources/&lt;teacher-index&gt;.adoc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In particular, “lesson A” is in subdirectory <code>lessonA</code> inside
+<code>lessons</code>. The lesson plan is an <code>.adoc</code> file in
+<code>lessons/lessonA/langs/en-us</code> (it can have any filename, here
+<code>jened.adoc</code>).</p>
+</div>
+<div class="paragraph">
+<p>The exercises associated with lesson A are alongside the lesson
+plan adoc file, in subdirectory <code>exercises</code>. Images are in
+subdir <code>images</code>. Single workpages are in subdir <code>workbook-pages</code>
+(some of these can be static PDFs). The index of these lesson
+pages, in correct order, is in <code>lesson-index.rkt</code>.</p>
+</div>
+<div class="paragraph">
+<p>The subdir <code>workbook-sols-pages</code> contains workpages that would
+replace corresponding pages in the <code>workbook-pages</code> directory
+when creating the teacher version of the lesson pages. They use
+the same filename as the “student” pages they replace. Only pages
+that differ between the two versions need be supplied.</p>
+</div>
+<div class="paragraph">
+<p>There are two pathways in the repo for now:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pathways/pathwayP
+pathways/bs-flags-pathway</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In a pathway’s directory, the pathway narrative is in
+<code>langs/en-us/main.adoc</code> (name can be anything). Alongside it, its
+index of lessons, in correct order, is in <code>workbook-index.rkt</code>.
+These lessons are drawn from the <code>lessons</code>
+tree.</p>
+</div>
+<div class="paragraph">
+<p>The top dir contains the script <code>build-pathway</code>. It takes any
+number of pathways and creates a generated document tree for eahc
+of them under the <code>distribution</code> directory.</p>
+</div>
+<div class="paragraph">
+<p>E.g., <code>build-pathway pathwayP</code> (or
+or <code>pathways/pathwayP</code> or <code>pathways/pathwayP/</code>, for those into
+shell completion) builds the subtree
+<code>distribution/pathwayP</code>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>distribution/
+  pathwayX/langs/en-us/narrative.html
+                       lessons/
+                              jened.html
+                              exercises/*.{html,pdf}
+                              workbook-pages/*.{html.pdf}
+                       resources/
+                          &lt;teacher-index&gt;.html
+                          protected/
+                             workbook-sols.pdf
+                       workbook/workbook.pdf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that two workbook PDFs can be created, one for the students
+in the <code>workbook</code> directory; and another for teachers in the
+“protected” directory <code>resources/protected</code>.</p>
+</div>
+<div class="paragraph">
+<p>For now, as a convenience, calling <code>build-pathway</code> without an arg builds
+<code>distribution/bs-flags-pathway</code>.</p>
+</div>
+<div class="paragraph">
+<p>As a further convenience, a <code>git push</code> into the <code>master</code> branch
+automatically triggers a build of the <code>bs-flags-pathway</code> doctree
+and showcases it on the website
+<code>bootstrapworld.github.io/curriculum</code>.  (The choice of pathway(s) so
+to showcase may change in the future.)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jened_sample_doc">jened sample doc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following was reverse-engineered from the latest Google Docs
+mock-up of a lesson from Jen/Ed. Change this to reflect
+experience.</p>
+</div>
+<div class="paragraph">
+<p><a href="distribution/lessons/lessonA/langs/en-us/jened.html">Sample
+lesson plan</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_git_basics">Git basics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Fork this repo to your GitHub account (say, <code>jrandomuser</code>). (This is done using
+obvious clickety click on the GitHub page.)</p>
+</div>
+<div class="paragraph">
+<p>In your terminal, clone your fork thusly:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git clone https://github.com/jrandomuser/curriculum</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will create a local repo where you can try things, change
+things, etc. But first, to retain connection with the original do:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git remote add upstream https://github.com/bootstrapworld/curriculum</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Every time the original changes, update like so:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git fetch upstream
+git merge upstream/master</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You are probably in your own <code>master</code> branch. Even if you’re
+“branching out” to other new branches, the above merge will
+mostly work.  “Mostly” because merge often triggers conflicts
+depending on how far you have diverged from the original. At the
+very least, make sure you’ve checked in all your changes that you
+care about, before you attempt a merge. For changes you aren’t
+ready to check in, save the concerned files somewhere else, and
+make sure there are no “modified” files in your directory.</p>
+</div>
+<div class="sect2">
+<h3 id="_creating_your_private_branch_in_the_original_repo">Creating your private branch in the original repo</h3>
+<div class="paragraph">
+<p>Alternatively&#8201;&#8212;&#8201;and this will work only for greenlisted members&#8201;&#8212;&#8201;clone the repo directly and add your own branch, e.g.,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git clone https://github.com/bootstrapworld/curriculum
+cd curriculum
+git checkout -b jenbranch</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can pull and merge from <code>master</code> as needed:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git checkout master
+git pull
+git checkout jenbranch
+git merge master</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If conflicts arise, you will be given a way to resolve them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_to_make_your_fetchmerge_experience_easier">To make your fetch/merge experience easier</h3>
+<div class="paragraph">
+<p>The directory <code>distribution</code> contains generated files which can
+always be re-generated. Before you merge, delete its contents and re-create
+its default so the merge doesn&#8217;t get snagged in it:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd distribution
+rm -fr *
+git checkout -- \*</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create your own lesson directories under <code>lessons</code> and your own
+pathways under <code>pathways</code>.  Work exclusively there, rather than
+the supplied lessons <code>lessonA</code>, <code>lessonB</code>, <code>lessonC</code> and supplied
+pathway <code>pathwayP</code>&#8201;&#8212;&#8201;which are there purely for illustration.
+As the original repo doesn&#8217;t know about your lessons and
+pathways, there will be no conflicts from that regard.</p>
+</div>
+<div class="paragraph">
+<p>NB: When you create a pathway, named <code>pathwayQ</code> say, use</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`./build-pathway pathwayQ`</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to generate its files. Without an argument, <code>build-pathway</code> uses
+<code>bs-flags-pathway</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_glossary_and_standards">Glossary and standards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Glossary items are annotated with the directive <code>@vocab</code>. E.g.,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@vocab{function}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Standards are annotated with <code>@std</code>. E.g.,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@std{2-AP-10 , 3A-NI-06 , N-Q&amp;1&amp;2, N-Q&amp;1&amp;3}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Such items are searched in
+<code>shared/langs/en-us/{glossary-terms.rkt,standards-dictionary.rkt}</code>,
+and are inserted as lists at the head of the document. In
+addition, glossary items for a set of files in a directory are
+collected into a file <code>summary.html</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercises">Exercises</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Exercise files are typically recipes and have calls to one of two
+directives</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@design-recipe-exercise{...}</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@assess-design-recipe{...}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The former is used to specify a correct recipe; the latter to
+introduce a recipe to be debugged. See examples of such files,
+<code>exercise*.adoc</code>, in the repo.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cross_references_and_pagination">Cross-references and pagination</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Both lesson plans and pathway narratives can refer to exercises
+or particular
+pages in a pathway workbook.  The relevant directive
+calls look like</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@worksheet-link{lessonA/exercises/exerciseA1.html, link-text}
+@worksheet-link{lessonA/workpages/pageA2.pdf, link-text}
+@worksheet-link{lessonA/jened.adoc, link-text}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The final argument for link text is optional.</p>
+</div>
+<div class="paragraph">
+<p>If called from a lesson plan for <code>lessonA</code>, the <code>lessonA/</code> may be
+dropped. Thus the first two examples can be rewritten:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@worksheet-link{exercises/exerciseA1.html, link-text}
+@worksheet-link{workpages/pageA2.pdf, link-text}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Except for exercises (which don&#8217;t feature in the workbook unless
+you created a workbook page for them), the rendered link has its
+link text (if any) augmented with a reference to the specific
+page number in the pathway worksheet.</p>
+</div>
+<div class="sect2">
+<h3 id="_generic_links">Generic links</h3>
+<div class="paragraph">
+<p>Use <code>@link{URL, link-text}</code> to refer to a generic URL
+not part of the curriculum hierarchy.  The second argument for
+the link text is optional.</p>
+</div>
+<div class="sect3">
+<h4 id="_generic_links_with_standard_names">Generic links with standard names</h4>
+<div class="paragraph">
+<p>Use <code>@worksheet-link{pointer, link-text}</code> to refer to a pointer
+(a standard name) to a possibly volatile URL. E.g.,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@worksheet-link{demo-page, The Demo Page}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The pointer <code>demo-page</code> is resolved using an index file
+<code>external-index.rkt</code>, which contains an assoc list, with entries
+like</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>("demo-page"
+     "https://bootstrapworld.github.io/curriculum/index.html")</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_some_useful_classes_and_directives">Some useful classes and directives</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some standard CSS classes to emphasize certain regions of text.</p>
+</div>
+<div class="paragraph">
+<p>Use</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[.strategy-box]
+.Header
+****
+Rem suscipit soluta quas recusandae dolor culpa non. Iste aut
+ipsum qui eos quidem et. Debitis omnis ipsam cupiditate ut vero
+odio.
+****</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to generate a “strategy box”, a boxed text with a blue border.</p>
+</div>
+<div class="paragraph">
+<p>Use</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[.notice-box]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to generate a “notice &amp; wonder box”, a boxed text with a purple
+border.</p>
+</div>
+<div class="paragraph">
+<p>Add the class <code>.physics-table</code> to a table attribute to generate a
+single-arg function
+table, e.g., one that maps miles driven to cost.</p>
+</div>
+<div class="paragraph">
+<p>Use the directive <code>@lessons-in-pathway</code> in a pathway narrative to
+insert a list of all the lessons referred to by the pathway
+(these are picked from the <code>workbook-index.rkt</code> file).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prereqs">Prereqs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Needed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Asciidoctor, a Ruby program, to generate HTML from AsciiDoc.
+(The format is AsciiDoc, the program that converts it is
+Asciidoctor. I wish we had this neat nomenclatural separation for
+other programs too.) To install it,</p>
+<div class="literalblock">
+<div class="content">
+<pre>sudo apt-get install asciidoctor</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>on Linux machines, and</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>brew install asciidoctor</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>on macOS.</p>
+</div>
+</li>
+<li>
+<p>Racket, to do preprocessing for metadata and other
+bookkeeping. Any version should do. I’m using very conservative
+Racket.</p>
+</li>
+<li>
+<p>PDF manipulators wktohtmltopdf and pdftk.  Standard
+installation as for Asciidoctor.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_a_brief_asciidoc_intro">A brief AsciiDoc intro</h3>
+<div class="paragraph">
+<p>An AsciiDoc source file typically as the extension <code>.adoc</code>, at
+least in our setup.</p>
+</div>
+<div class="paragraph">
+<p>A title (aka “level 1”) header has its line preceded by a single
+equal sign.</p>
+</div>
+<div class="paragraph">
+<p>Level 2 headers (“sections”) are preceded by two equal signs.
+Similarly for “subsections” at level 3, 4, 5, 6.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>= Title at level 1</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>== Section at level 2</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>=== Subsection at level 3</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>==== Et cetera</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Itemized lists have each item paragraph preceded by a <code>*</code> or
+<code>-</code> and space.</p>
+</div>
+<div class="paragraph">
+<p>Emphasized text is set within by _..._.</p>
+</div>
+<div class="paragraph">
+<p>Bold text within *...*.</p>
+</div>
+<div class="paragraph">
+<p>In-text code fragment within `...`.</p>
+</div>
+<div class="paragraph">
+<p>Code displays are on contiguous lines that are indented (amount
+of indentation doesn&#8217;t matter as long it&#8217;s non-0).</p>
+</div>
+<div class="paragraph">
+<p>Please see the
+<a href="https://asciidoctor.org/docs/user-manual">Asciidoctor manual</a> for
+the whole story. Learn just the bare minimum to get started writing,
+and then learn more as needed, either from the online manual, or by bugging
+me. (If something seems too tedious to learn or input, I could
+add it as a Racket directive.)</p>
+</div>
+<div class="paragraph">
+<p>If your Asciidoctor version is at least 2.0.0, you can type</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>asciidoctor --help syntax</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to get a brief reference guide to the syntax. To create a browsable HTML
+file, do</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>asciidoctor --help syntax | asciidoctor - -o help.html</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and open <code>help.html</code> in your browser.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-04-22 20:20:49 UTC
+</div>
+</div>
+</body>
+</html>

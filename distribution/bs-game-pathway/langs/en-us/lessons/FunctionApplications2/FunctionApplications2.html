@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.8">
+<title>Function Applications 2 (Animation with Functions)</title>
+<link rel="stylesheet" href="./curriculum.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Function Applications 2 (Animation with Functions)</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Students create the functions that will control animation in parts of their game.</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Lesson Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Students will be able to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Apply the Design Recipe to create a function with given parameters</p>
+</li>
+<li>
+<p>Explain the basics of animation</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Student-Facing Lesson Goals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>I can use the Design Recipe to make a function.</p>
+</li>
+<li>
+<p>I can describe how animation works.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Key Points for the Facilitator</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Encourage students to take their time in understanding <em>why</em> we want to fix <code>update-danger</code> and <code>update-target</code>.</p>
+</li>
+<li>
+<p>Students might be confused as to <em>how</em> the animation is working.  The <code>make-game</code> function at the bottom of the file has many inputs - including <code>update-danger</code> and <code>update-target</code>.  <code>make-game</code> takes in all those inputs and creates the interactive window that we see when we press the Run button!</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prerequisites</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Students should be familiar with Circles of Evaluation.</p>
+</li>
+<li>
+<p>Students should be familiar with the Design Recipe.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Materials</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Links to printables, activities, etc., go here</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stripes-none stretch left-header">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Math Standards (CCSS)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>MP.2</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CS Standards (CSTA)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>CS Standards here.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist standards-hierarchical-table">
+<div class="title">Standards Statements</div>
+<ul>
+<li>
+<p><strong>MP.2</strong>: Reason abstractly and quantitatively</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_ready">Get Ready:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Students should have their computer, contracts page, and pencil.  Students should have their saved "Game Template" file open in a separate window or tab.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_launch_5_min">Launch: (5 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Show the following short clip on animation: <a href="https://www.youtube.com/watch?v=-l-pLqBD58E">Animation Careers : How Does Cartoon Animation Work?</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What is persistence of vision?  <em>Our eyes fill in the gaps between rapidly changing images.</em></p>
+</li>
+<li>
+<p>How does this apply to animation? <em>It&#8217;s the basis for movies and animation, movies are just a large sequence of still images.</em></p>
+</li>
+<li>
+<p>How might this apply to our game? <em>If we change image coordinates a little bit at a time, they will appear to move.</em></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explore_10_min">Explore: (10 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Have students open the Animal Sprint program (<em>link to program</em>) and investigate the program with their partner.  Remind students to examine the code as well as the interactive portion.  If students want to change parts of the code, they can!</p>
+</div>
+<div class="sidebarblock strategy-box">
+<div class="content">
+<div class="title">Strategies for English Language Learners</div>
+<div class="paragraph">
+<p>MLR</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discuss_10_min">Discuss: (10 min)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>What did you notice about the movement of the animals?  What was changing about them? <em>Answers will vary: two animals were moving horizontally, the farmer was moving vertically, the x-coordinates or y-coordinates were changing, movement was based on the key pressed, etc.</em></p>
+</li>
+<li>
+<p>How did you connect the movement of the animals to the code? <em>Answers may vary: The fastest animal had the highest speed value, etc.</em></p>
+</li>
+<li>
+<p>Were you able to move all three animals simultaneously? <em>It&#8217;s difficult to move all three animals smoothly.</em></p>
+</li>
+<li>
+<p>What jobs could we hand over to the computer to make it possible for us to play the game? <em>The computer could handle automatically moving two of the animals for us, then we could control the movement of third.</em></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_practice_10_min">Practice (10 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Have students examine the <code>update-danger</code> function in their Game Template file, identify the contract, and interpret what the function is currently doing.</p>
+</div>
+<div class="paragraph">
+<p>Guide students as they complete the Design Recipe workbook pages for <code>update-danger</code> and transfer the code to their Game Template file.</p>
+</div>
+<div class="paragraph">
+<p>When students press the Run button, the working <code>update-danger</code> function should automatically move the <code>DANGER</code> image across the screen!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_apply_10_min">Apply (10 min)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Have students complete the Design Recipe workbook page for <code>update-target</code> with their partner and transfer the code to their Game Template file.  Press Run to see <code>DANGER</code> and <code>TARGET</code> move across the screen independently!</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-04-22 20:21:59 UTC
+</div>
+</div>
+</body>
+</html>
